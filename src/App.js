@@ -17,7 +17,7 @@ function App() {
     if(storedUserLoggedInInformation==='1'){
     setIsLoggedIn(true);
   }
-  
+
   }, [])
 
   const loginHandler = (email, password) => {
@@ -29,6 +29,7 @@ function App() {
 
   const logoutHandler = () => {
     setIsLoggedIn(false);
+    localStorage.removeItem('isLoggedIn');
   };
 
   return (
